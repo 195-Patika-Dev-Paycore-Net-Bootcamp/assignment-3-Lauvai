@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>VeliErdemCoskun_Hafta3</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Context\IMapperSession.2cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="Context\IMapperSession.2cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NHibernate" Version="5.3.12" />
+    <PackageReference Include="Serilog" Version="2.11.0" />
+    <PackageReference Include="Serilog.Sinks.NUnit" Version="1.0.3" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Container\Container.csproj" />
+  </ItemGroup>
+
+</Project>

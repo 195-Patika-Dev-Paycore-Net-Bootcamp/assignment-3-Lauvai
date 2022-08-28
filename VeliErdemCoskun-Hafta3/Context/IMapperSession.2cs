@@ -1,0 +1,18 @@
+﻿using System.Linq;
+using Vehicle.Model;
+
+namespace Vehicle.Context
+{
+    public interface IMapperSession
+    {
+        void BeginTransaction();
+        void Commit();
+        void Rollback();
+        void CloseTransaction();
+        void Save(VehicleModel entity);
+        void Update(VehicleModel entity);
+        void Delete(VehicleModel entity);
+
+        IQueryable<VehicleModel> Vehicles { get; }
+    }
+}
